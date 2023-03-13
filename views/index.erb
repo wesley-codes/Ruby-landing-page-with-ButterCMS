@@ -13,12 +13,6 @@
   </head>
   <body>
  
-  <% data['transform_dog_component'].each do |item|%>
-    <li><%= item%></li>
-  <% end %>
-
- 
-
     <!-- //nav bar -->
     <div class="nav_container">
       <div class="logo_container">
@@ -32,6 +26,8 @@
       </div>
     </div>
 
+
+
     <!-- // hero section -->
 
     <div class="hero_container">
@@ -39,8 +35,7 @@
         <h1>  <%= data['porpi_hero_component']['hero_title'] %></h1>
         <p>
         <%= data['porpi_hero_component']['hero_subtitle'] %>
-
-        </p>
+       </p>
       </div>
       <div class="img_container">
         <img src=  <%= data['porpi_hero_component']['hero_img'] %>
@@ -48,79 +43,48 @@
       </div>
     </div>
 
-    <!-- Features section -->
+
+
+    <!-- Tranform section -->
 
     <h2> Transform your dogs life</h2>
     <div class="feature_container">
-      <div class="features_box">
-        <div class="feature_avatar avatar_1">
-          <img src="assets/TVFeature.png" />
-        </div>
-        <h3 class="features_title">Step-by-step training videos</h3>
-        <p>Expert Training Videos for all relevant categories.</p>
-      </div>
 
+    <% data['transform_dog_component'].each do |item|%>
       <div class="features_box">
-        <div class="feature_avatar avatar_2">
-          <img src="assets/HomeFeatures.png" />
-        </div>
-        <h3 class="features_title">Train your dog at home</h3>
-        <p>The training concept is an absolute breeze to do at home.</p>
+      <div class="feature_avatar avatar_2">
+        <img src=<%= item['transform_img']%>
+        />
       </div>
+      <h3 class="features_title"><%= item['transform_header']%></h3>
+      <p><%= item['transform_subtitle']%></p>
+    </div>
 
-      <div class="features_box">
-        <div class="feature_avatar avatar_3">
-          <img src="assets/HeartFeatures.png" />
-        </div>
-        <h3 class="features_title">Bonding Sessions like no other</h3>
-        <p>Strengthen the bond between you and your puppy.</p>
-      </div>
-
-      <div class="features_box">
-        <div class="feature_avatar avatar_4">
-          <img src="assets/BoneFeatures.png" />
-        </div>
-        <h3 class="features_title">Physical & mental workouts</h3>
-        <p>Keep your dog in shape – mentally and physically..</p>
-      </div>
+    <% end %>
+   
     </div>
 
     <!-- Care -->
 
     <div class="care_section">
     <h2> Connect with your Porpi </h2>
-      <div class="care_container">
-        <div class="care_content">
-          <h5>Grow together</h5>
-          <h2>Bonding sessions with owner.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum
-            et velit, facere aspernatur ad beatae deserunt excepturi?
-            Consequuntur reprehenderit accusantium in ratione ipsam ullam, a
-            quos deserunt cum ipsa.
-          </p>
-        </div>
-        <div class="img_container">
-          <img src="assets/Bonding.png" class="care_img" />
-        </div>
-      </div>
 
+    <% data['connect_porpi_component'].each do |item|%>
       <div class="care_container">
-        <div class="care_content">
-          <h5>Health benefits</h5>
-          <h2>Physical workouts .</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa porro
-            reiciendis velit at, repudiandae distinctio itaque aliquid minima
-            autem architecto ab, praesentium sed veniam, esse animi fuga
-            delectus illum atque.
-          </p>
-        </div>
-        <div class="img_container">
-          <img src="assets/Skating.png" class="care_img" />
-        </div>
+      <div class="care_content">
+        <h5>Grow together</h5>
+        <h2><%= item['connect_header']%></h2>
+        <p>
+        <%= item['connect_subtitle']%>
+        </p>
+      </div>
+      <div class="img_container">
+        <img src=<%= item['connect_image']%> class="care_img" />
       </div>
     </div>
+    <% end %>
+    </div>
+
 
     <footer>
       <div>
@@ -128,7 +92,7 @@
           <img src="assets/logo.png" alt="" class="logoImg" />
           <h1 class="logo">Porpi</h1>
         </div>
-        <p>© 2020 Pupy GmbH. All rights reserved.</p>
+        <p>© 2023 All rights reserved.</p>
       </div>
 
       <div>
@@ -147,7 +111,6 @@
         <p class="footer_header">Legal</p>
         <p><a>Terms of Use</a></p>
         <p><a>Privacy Policy</a></p>
-        <p><a>Imprint</a></p>
       </div>
     </footer>
   </body>

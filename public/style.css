@@ -94,28 +94,14 @@ a {
 }
 
 .avatar_1 {
-  background-color: #ff7154;
-}
-
-.avatar_2 {
   background-color: #ffbd2e;
-}
-
-.avatar_3 {
-  background-color: rgb(59, 62, 92);
-}
-
-.avatar_4 {
-  background-color: #fc5c7b;
 }
 
 /* care */
 
 .care_section {
   margin: 3rem 0;
- 
 }
-
 
 .care_container {
   display: flex;
